@@ -15,6 +15,7 @@
 		0E8C388E25965DE700501CA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E8C388C25965DE700501CA1 /* LaunchScreen.storyboard */; };
 		0E8C389925965DE700501CA1 /* AppStore_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C389825965DE700501CA1 /* AppStore_CloneTests.swift */; };
 		0E8C38A425965DE700501CA1 /* AppStore_CloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C38A325965DE700501CA1 /* AppStore_CloneUITests.swift */; };
+		0E8C38B5259661E300501CA1 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C38B4259661E300501CA1 /* BaseTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0E8C389F25965DE700501CA1 /* AppStore CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppStore CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8C38A325965DE700501CA1 /* AppStore_CloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore_CloneUITests.swift; sourceTree = "<group>"; };
 		0E8C38A525965DE700501CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E8C38B4259661E300501CA1 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				0E8C388A25965DE700501CA1 /* Assets.xcassets */,
 				0E8C388C25965DE700501CA1 /* LaunchScreen.storyboard */,
 				0E8C388F25965DE700501CA1 /* Info.plist */,
+				0E8C38B4259661E300501CA1 /* BaseTabBarController.swift */,
 			);
 			path = "AppStore Clone";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8C38B5259661E300501CA1 /* BaseTabBarController.swift in Sources */,
 				0E8C388625965DE600501CA1 /* ViewController.swift in Sources */,
 				0E8C388225965DE500501CA1 /* AppDelegate.swift in Sources */,
 				0E8C388425965DE600501CA1 /* SceneDelegate.swift in Sources */,
