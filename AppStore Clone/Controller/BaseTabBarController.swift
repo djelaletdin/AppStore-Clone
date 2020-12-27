@@ -1,4 +1,4 @@
-//
+// 
 //  BaseTabBarController.swift
 //  AppStore Clone
 //
@@ -14,10 +14,9 @@ class BaseTabBarController: UITabBarController {
         
 
         viewControllers = [
+            createNavController(viewController: AppsSearchController(), title: "SEARCH", image: #imageLiteral(resourceName: "search")),
             createNavController(viewController: UIViewController(), title: "TODAY", image: #imageLiteral(resourceName: "today_icon")),
             createNavController(viewController: UIViewController(), title: "APPS", image: #imageLiteral(resourceName: "apps")),
-            createNavController(viewController: AppsSearchController(), title: "SEARCH", image: #imageLiteral(resourceName: "search"))
-            
         ]
     }
     
@@ -25,6 +24,7 @@ class BaseTabBarController: UITabBarController {
         
         viewController.view.backgroundColor = .white
         viewController.navigationItem.title = title
+        
         let navController = UINavigationController(rootViewController: viewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
