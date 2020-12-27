@@ -9,7 +9,7 @@ import UIKit
 
 class SearchResultCell: UICollectionViewCell {
     
-    let imageView: UIImageView = {
+    let appIconImageView: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .red
         iv.widthAnchor.constraint(equalToConstant: 64).isActive = true
@@ -21,21 +21,18 @@ class SearchResultCell: UICollectionViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "APP NAME"
-        label.backgroundColor = .yellow
         return label
     }()
     
     let categoryLabel: UILabel = {
         let label = UILabel()
         label.text = "CATEGORY NAME"
-        label.backgroundColor = .yellow
         return label
     }()
     
     let ratingsLabel: UILabel = {
         let label = UILabel()
         label.text = "APP RATING"
-        label.backgroundColor = .yellow
         return label
     }()
     
@@ -51,23 +48,35 @@ class SearchResultCell: UICollectionViewCell {
         return button
     }()
     
+    lazy var screenshot1ImageView = self.createScreehshotImage()
+    lazy var screenshot2ImageView = self.createScreehshotImage()
+    lazy var screenshot3ImageView = self.createScreehshotImage()
+
+    
+    func createScreehshotImage() -> UIImageView {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .blue
+        return imageView
+    }
      
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .black
+        let labelsStackView = VerticalStackView(arrangedSubviews: [nameLabel, categoryLabel, ratingsLabel])
         
+        let screenshotStackView = UIStackView(arrangedSubviews: [screenshot1ImageView, screenshot2ImageView, screenshot3ImageView])
+        screenshotStackView.spacing = 12
+        screenshotStackView.distribution = .fillEqually
         
-        let labelsStackView = UIStackView(arrangedSubviews: [nameLabel, categoryLabel, ratingsLabel])
-        labelsStackView.axis = .vertical
+        let infoTopStackView = UIStackView(arrangedSubviews: [appIconImageView, labelsStackView, getButton])
+        infoTopStackView.spacing = 12
+        infoTopStackView.alignment = .center
         
-        let stackView = UIStackView(arrangedSubviews: [imageView, labelsStackView, getButton])
-        stackView.spacing = 12
-        stackView.alignment = .center
-
-        addSubview(stackView)
-        stackView.fillSuperview(padding: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
+        let overallStackView = VerticalStackView(arrangedSubviews: [infoTopStackView, screenshotStackView], spacing: 16)
+        
+        addSubview(overallStackView)
+        overallStackView.fillSuperview(padding: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
     }
     
     required init?(coder: NSCoder) {

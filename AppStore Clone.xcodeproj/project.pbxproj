@@ -19,6 +19,7 @@
 		0E8C38B5259661E300501CA1 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C38B4259661E300501CA1 /* BaseTabBarController.swift */; };
 		0E8C38C12596A64B00501CA1 /* AppsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C38C02596A64B00501CA1 /* AppsSearchController.swift */; };
 		0EDD37E62598AC9300FCD87F /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDD37E52598AC9300FCD87F /* UIView+Layout.swift */; };
+		0EDD37EB2598B79300FCD87F /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDD37EA2598B79300FCD87F /* VerticalStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0E8C38B4259661E300501CA1 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		0E8C38C02596A64B00501CA1 /* AppsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsSearchController.swift; sourceTree = "<group>"; };
 		0EDD37E52598AC9300FCD87F /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		0EDD37EA2598B79300FCD87F /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDD37E52598AC9300FCD87F /* UIView+Layout.swift */,
+				0EDD37EA2598B79300FCD87F /* VerticalStackView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				0E8C388225965DE500501CA1 /* AppDelegate.swift in Sources */,
 				0E8C38C12596A64B00501CA1 /* AppsSearchController.swift in Sources */,
 				0E7E7A6C25978B8400D0EFE9 /* SearchResultCell.swift in Sources */,
+				0EDD37EB2598B79300FCD87F /* VerticalStackView.swift in Sources */,
 				0EDD37E62598AC9300FCD87F /* UIView+Layout.swift in Sources */,
 				0E8C388425965DE600501CA1 /* SceneDelegate.swift in Sources */,
 			);
