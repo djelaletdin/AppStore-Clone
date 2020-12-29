@@ -10,10 +10,10 @@ import Foundation
 class Service {
     static let shared = Service()
     
-    func fetchApps(completion: @escaping ([Result], Error?) -> ()) {
+    func fetchApps(searchTerm: String, completion: @escaping ([Result], Error?) -> ()) {
         print("fetching stuff right now")
         
-        let urlString = "https://itunes.apple.com/search?term=turkmen&entity=software"
+        let urlString = "https://itunes.apple.com/search?term=\(searchTerm)&entity=software"
         guard let url = URL(string: urlString) else {return}
         URLSession.shared.dataTask(with: url) { (data, resp, err) in
             
