@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class AppsSearchController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 
     fileprivate var cellId = "id1234"
     fileprivate let searchController = UISearchController(searchResultsController: nil)
@@ -43,7 +43,7 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
-            Service.shared.fetchApps(searchTerm: searchText) { (result, error) in
+            Service.shared.fetchApps(searchTerm: searchText) {(result, error) in
                 if let _ = error{return}
                 self.appResults = result
                 DispatchQueue.main.async {
@@ -82,13 +82,5 @@ class AppsSearchController: UICollectionViewController, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchResultCell
         cell.appResult = self.appResults[indexPath.row]
         return cell
-    }
-    
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
