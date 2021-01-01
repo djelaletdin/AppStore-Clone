@@ -16,7 +16,7 @@ class AppRowCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-            backgroundColor = .green
+            backgroundColor = .white
         
         imageView.constrainWidth(constant: 64)
         imageView.constrainHeight(constant: 64)
@@ -26,9 +26,10 @@ class AppRowCell: UICollectionViewCell {
         getButton.constrainWidth(constant: 80)
         getButton.layer.cornerRadius = 16
         getButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        let stackView = UIStackView(arrangedSubviews: [imageView, nameLabel, getButton])
+        let stackView = UIStackView(arrangedSubviews: [imageView, VerticalStackView(arrangedSubviews: [nameLabel, companyName], spacing: 4), getButton])
         addSubview(stackView)
         stackView.alignment = .center
+        stackView.spacing = 16
         stackView.fillSuperview()
         
         }

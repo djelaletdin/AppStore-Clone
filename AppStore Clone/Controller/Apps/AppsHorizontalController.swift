@@ -12,8 +12,8 @@ let cellId = "cellId"
 class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlowLayout {
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .blue
         collectionView.register(AppRowCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.backgroundColor = .white
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout{
             layout.scrollDirection = .horizontal
         }
