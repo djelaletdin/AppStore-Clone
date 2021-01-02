@@ -15,6 +15,7 @@
 		0E3CC6F1259C519000C8C3FA /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CC6F0259C519000C8C3FA /* BaseListController.swift */; };
 		0E60C9CE259ADDCA00EFE8A2 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E60C9CD259ADDCA00EFE8A2 /* SearchResult.swift */; };
 		0E60C9D4259B238700EFE8A2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E60C9D3259B238700EFE8A2 /* Service.swift */; };
+		0E74DB3E25A0D10400C7AFC9 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74DB3D25A0D10400C7AFC9 /* AppGroup.swift */; };
 		0E7E7A6C25978B8400D0EFE9 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E7A6B25978B8400D0EFE9 /* SearchResultCell.swift */; };
 		0E8C388225965DE500501CA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C388125965DE500501CA1 /* AppDelegate.swift */; };
 		0E8C388425965DE600501CA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C388325965DE600501CA1 /* SceneDelegate.swift */; };
@@ -62,6 +63,7 @@
 		0E3CC6F0259C519000C8C3FA /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		0E60C9CD259ADDCA00EFE8A2 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		0E60C9D3259B238700EFE8A2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		0E74DB3D25A0D10400C7AFC9 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		0E7E7A6B25978B8400D0EFE9 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		0E8C387E25965DE500501CA1 /* AppStore Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppStore Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8C388125965DE500501CA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0E60C9CD259ADDCA00EFE8A2 /* SearchResult.swift */,
+				0E74DB3D25A0D10400C7AFC9 /* AppGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				0EDD37E62598AC9300FCD87F /* UIView+Layout.swift in Sources */,
 				0E2F67CE259DC80300734191 /* Extensions.swift in Sources */,
 				0E3CC6F1259C519000C8C3FA /* BaseListController.swift in Sources */,
+				0E74DB3E25A0D10400C7AFC9 /* AppGroup.swift in Sources */,
 				0EF61458259F5AE4009D8D40 /* AppsHeaderCell.swift in Sources */,
 				0E8C388425965DE600501CA1 /* SceneDelegate.swift in Sources */,
 				0E2F67C4259DADC900734191 /* AppsHorizontalController.swift in Sources */,
