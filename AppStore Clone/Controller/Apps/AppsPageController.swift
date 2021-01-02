@@ -11,6 +11,8 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     
     let cellId = "id1212"
     let headerId = "headerid"
+    var editorsChoiceGames: AppGroup?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
@@ -27,7 +29,11 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
                 return
             }
             print("it`s kinda working ")
-            appGroup?.feed.results.forEach({print($0.name)})
+            DispatchQueue.main.async {
+                self.editorsChoiceGames = appGroup
+                self.collectionView.reloadData()
+
+            }
         }
     }
     
@@ -41,11 +47,14 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppsGroupCell
+        cell.titleLabel.text = self.editorsChoiceGames?.feed.title
+        cell.horizentalController.appGroup = self.editorsChoiceGames
+        cell.horizentalController.collectionView.reloadData()
         return cell
     }
     
