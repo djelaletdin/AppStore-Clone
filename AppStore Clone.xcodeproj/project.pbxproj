@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1EE42725A728C400A7131D /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EE42625A728C400A7131D /* SocialApp.swift */; };
 		0E2F67BB259DA37D00734191 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2F67BA259DA37D00734191 /* AppsGroupCell.swift */; };
 		0E2F67C4259DADC900734191 /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2F67C3259DADC900734191 /* AppsHorizontalController.swift */; };
 		0E2F67C9259DC6A600734191 /* AppRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2F67C8259DC6A600734191 /* AppRowCell.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E1EE42625A728C400A7131D /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		0E2F67BA259DA37D00734191 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 		0E2F67C3259DADC900734191 /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
 		0E2F67C8259DC6A600734191 /* AppRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowCell.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				0E60C9CD259ADDCA00EFE8A2 /* SearchResult.swift */,
 				0E74DB3D25A0D10400C7AFC9 /* AppGroup.swift */,
+				0E1EE42625A728C400A7131D /* SocialApp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8C38B5259661E300501CA1 /* BaseTabBarController.swift in Sources */,
+				0E1EE42725A728C400A7131D /* SocialApp.swift in Sources */,
 				0E3CC6EC259C4F2C00C8C3FA /* AppsPageController.swift in Sources */,
 				0E60C9CE259ADDCA00EFE8A2 /* SearchResult.swift in Sources */,
 				0E8C388625965DE600501CA1 /* ViewController.swift in Sources */,
