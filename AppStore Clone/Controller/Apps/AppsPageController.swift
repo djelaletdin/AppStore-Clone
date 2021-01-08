@@ -15,11 +15,21 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     var group = [AppGroup]()
     var socailApps = [SocialApp]()
 
+    let activityIndicatorView: UIActivityIndicatorView = {
+        let aiv = UIActivityIndicatorView(style: .large)
+        aiv.color = .black
+        aiv.startAnimating()
+        aiv.hidesWhenStopped = true
+        return aiv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+        view.addSubview(activityIndicatorView)
+        activityIndicatorView.fillSuperview()
         fetchData()
     }
     
@@ -73,15 +83,17 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
             }
         }
         
-        dispatchGroup.notify(queue: .main) {
-            self.group.append(contentsOf: groups)
-        }
         dispatchGroup.enter()
         Service.shared.fetchSocialApps { (apps, error) in
             dispatchGroup.leave()
                 self.socailApps  = apps ?? []
 
             apps?.forEach({print("sfsdf"+$0.name)})
+        }
+        
+        dispatchGroup.notify(queue: .main) {
+            self.activityIndicatorView.stopAnimating()
+            self.group.append(contentsOf: groups)
         }
         
     }
