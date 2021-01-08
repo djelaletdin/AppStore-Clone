@@ -13,7 +13,8 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     let headerId = "headerid"
 //    var editorsChoiceGames: AppGroup?
     var group = [AppGroup]()
-    
+    var socailApps = [SocialApp]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
@@ -75,11 +76,20 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         dispatchGroup.notify(queue: .main) {
             self.group.append(contentsOf: groups)
         }
+        dispatchGroup.enter()
+        Service.shared.fetchSocialApps { (apps, error) in
+            dispatchGroup.leave()
+                self.socailApps  = apps ?? []
+
+            apps?.forEach({print("sfsdf"+$0.name)})
+        }
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! AppsPageHeader
-        header.appHeaderHorizontalControllers
+        header.appHeaderHorizontalControllers.socialApps = self.socailApps
+        header.appHeaderHorizontalControllers.collectionView.reloadData()
         return header
     }
     

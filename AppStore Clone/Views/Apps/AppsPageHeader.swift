@@ -10,10 +10,11 @@ import UIKit
 class AppsPageHeader: UICollectionReusableView {
      
     let appHeaderHorizontalControllers = AppsHeaderHorizontalController()
+    var socialApps = [SocialApp]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-    
+        appHeaderHorizontalControllers.collectionView.reloadData()
         addSubview(appHeaderHorizontalControllers.view)
         appHeaderHorizontalControllers.view.fillSuperview()
     }

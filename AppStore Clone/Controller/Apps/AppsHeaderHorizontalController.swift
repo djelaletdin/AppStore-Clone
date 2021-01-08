@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AppsHeaderHorizontalController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellid"
+    var socialApps = [SocialApp]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(socialApps.count)
         collectionView.backgroundColor = .white
         collectionView.register(AppsHeaderCell.self, forCellWithReuseIdentifier: cellId)
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout{
@@ -31,12 +34,17 @@ class AppsHeaderHorizontalController: BaseListController, UICollectionViewDelega
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return socialApps.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppsHeaderCell
-        cell.companyLabel.text = "Didar Jelaletdinov"
+        let app = self.socialApps[indexPath.row]
+        
+        cell.companyLabel.text = app.name
+        cell.titleLabel.text = app.tagline
+        cell.imageView.sd_setImage(with: URL(string: app.imageUrl))
+//        cell.socialApp = self.socialApps[indexPath.row]
         return cell
     }
 }

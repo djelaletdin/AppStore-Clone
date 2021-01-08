@@ -53,7 +53,6 @@ class Service {
                 let appGroup = try JSONDecoder().decode(AppGroup.self, from: data!)
                 completion(appGroup, nil)
             
-                appGroup.feed.results.forEach({print($0.name)})
             }
             catch{
                 completion(nil, error)
@@ -64,7 +63,7 @@ class Service {
     }
     
     func fetchSocialApps(completion: @escaping ([SocialApp]?, Error?) -> Void){
-        let urlString = "https://api.letbuildthatapp.com/appstore/social"
+        let urlString = "https://api.letsbuildthatapp.com/appstore/social"
         guard let url = URL(string: urlString) else {return}
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in
