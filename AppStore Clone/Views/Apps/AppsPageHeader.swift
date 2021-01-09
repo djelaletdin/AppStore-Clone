@@ -9,14 +9,14 @@ import UIKit
 
 class AppsPageHeader: UICollectionReusableView {
      
-    let appHeaderHorizontalControllers = AppsHeaderHorizontalController()
+    let appHeaderHorizontalController = AppsHeaderHorizontalController()
     var socialApps = [SocialApp]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        appHeaderHorizontalControllers.collectionView.reloadData()
-        addSubview(appHeaderHorizontalControllers.view)
-        appHeaderHorizontalControllers.view.fillSuperview()
+        appHeaderHorizontalController.collectionView.reloadData()
+        addSubview(appHeaderHorizontalController.view)
+        appHeaderHorizontalController.view.fillSuperview()
     }
 
     required init?(coder: NSCoder) {

@@ -92,16 +92,18 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         }
         
         dispatchGroup.notify(queue: .main) {
-            self.activityIndicatorView.stopAnimating()
             self.group.append(contentsOf: groups)
+            self.collectionView.reloadData()
+            self.activityIndicatorView.stopAnimating()
+            
         }
         
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! AppsPageHeader
-        header.appHeaderHorizontalControllers.socialApps = self.socailApps
-        header.appHeaderHorizontalControllers.collectionView.reloadData()
+        header.appHeaderHorizontalController.socialApps = self.socailApps
+        header.appHeaderHorizontalController.collectionView.reloadData()
         return header
     }
     
@@ -118,8 +120,8 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         
         let app = group[indexPath.row]
         cell.titleLabel.text = app.feed.title
-        cell.horizentalController.appGroup = app
-        cell.horizentalController.collectionView.reloadData()
+        cell.horizontalController.appGroup = app
+        cell.horizontalController.collectionView.reloadData()
         return cell
     }
     
