@@ -10,6 +10,8 @@
 		0E1EE42725A728C400A7131D /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EE42625A728C400A7131D /* SocialApp.swift */; };
 		0E2C0EB125A929E9005B7864 /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2C0EB025A929E9005B7864 /* HorizontalSnappingController.swift */; };
 		0E2C0EB625A92D4D005B7864 /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2C0EB525A92D4D005B7864 /* BetterSnappingLayout.swift */; };
+		0E2C0EC025A93C84005B7864 /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2C0EBF25A93C84005B7864 /* AppDetailController.swift */; };
+		0E2C0EC625A942E5005B7864 /* AppDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2C0EC525A942E5005B7864 /* AppDetailCell.swift */; };
 		0E2F67BB259DA37D00734191 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2F67BA259DA37D00734191 /* AppsGroupCell.swift */; };
 		0E2F67C4259DADC900734191 /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2F67C3259DADC900734191 /* AppsHorizontalController.swift */; };
 		0E2F67C9259DC6A600734191 /* AppRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2F67C8259DC6A600734191 /* AppRowCell.swift */; };
@@ -61,6 +63,8 @@
 		0E1EE42625A728C400A7131D /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		0E2C0EB025A929E9005B7864 /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
 		0E2C0EB525A92D4D005B7864 /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
+		0E2C0EBF25A93C84005B7864 /* AppDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
+		0E2C0EC525A942E5005B7864 /* AppDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailCell.swift; sourceTree = "<group>"; };
 		0E2F67BA259DA37D00734191 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 		0E2F67C3259DADC900734191 /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
 		0E2F67C8259DC6A600734191 /* AppRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowCell.swift; sourceTree = "<group>"; };
@@ -131,9 +135,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E2C0EBE25A93C5D005B7864 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				0E2C0EBF25A93C84005B7864 /* AppDetailController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		0E2C0EC425A942D0005B7864 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				0E2C0EC525A942E5005B7864 /* AppDetailCell.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		0E2F67BF259DAD7400734191 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				0E2C0EC425A942D0005B7864 /* Details */,
 				0E2F67BA259DA37D00734191 /* AppsGroupCell.swift */,
 				0E2F67C8259DC6A600734191 /* AppRowCell.swift */,
 				0EF6144A259F566D009D8D40 /* AppsPageHeader.swift */,
@@ -145,6 +166,7 @@
 		0E3CC6EA259C4F0A00C8C3FA /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				0E2C0EBE25A93C5D005B7864 /* Details */,
 				0E3CC6EB259C4F2B00C8C3FA /* AppsPageController.swift */,
 				0E2F67C3259DADC900734191 /* AppsHorizontalController.swift */,
 				0EF6144F259F588F009D8D40 /* AppsHeaderHorizontalController.swift */,
@@ -175,7 +197,6 @@
 			children = (
 				0E2F67BF259DAD7400734191 /* Apps */,
 				0E7E7A6B25978B8400D0EFE9 /* SearchResultCell.swift */,
-				0E2F67CD259DC80300734191 /* Extensions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +286,7 @@
 				0EDD37E52598AC9300FCD87F /* UIView+Layout.swift */,
 				0EDD37EA2598B79300FCD87F /* VerticalStackView.swift */,
 				0E2C0EB525A92D4D005B7864 /* BetterSnappingLayout.swift */,
+				0E2F67CD259DC80300734191 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -542,6 +564,7 @@
 				0E2C0EB125A929E9005B7864 /* HorizontalSnappingController.swift in Sources */,
 				0E2C0EB625A92D4D005B7864 /* BetterSnappingLayout.swift in Sources */,
 				0EDD37EB2598B79300FCD87F /* VerticalStackView.swift in Sources */,
+				0E2C0EC025A93C84005B7864 /* AppDetailController.swift in Sources */,
 				0EF61450259F588F009D8D40 /* AppsHeaderHorizontalController.swift in Sources */,
 				0E60C9D4259B238700EFE8A2 /* Service.swift in Sources */,
 				0EF6144B259F566D009D8D40 /* AppsPageHeader.swift in Sources */,
@@ -549,6 +572,7 @@
 				0E2F67CE259DC80300734191 /* Extensions.swift in Sources */,
 				0E3CC6F1259C519000C8C3FA /* BaseListController.swift in Sources */,
 				0E74DB3E25A0D10400C7AFC9 /* AppGroup.swift in Sources */,
+				0E2C0EC625A942E5005B7864 /* AppDetailCell.swift in Sources */,
 				0EF61458259F5AE4009D8D40 /* AppsHeaderCell.swift in Sources */,
 				0E8C388425965DE600501CA1 /* SceneDelegate.swift in Sources */,
 				0E2F67C4259DADC900734191 /* AppsHorizontalController.swift in Sources */,
@@ -658,7 +682,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -713,7 +737,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

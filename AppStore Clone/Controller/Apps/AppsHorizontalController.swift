@@ -22,6 +22,19 @@ class AppsHorizontalController: HorizontalSnappingController, UICollectionViewDe
         collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
     }
     
+    var didSelectHandler: ((FeedResult)->())?
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let app  = self.appGroup?.feed.results[indexPath.row]{
+            print(app.name)
+            didSelectHandler?(app)
+        }
+        
+        
+
+        
+    }
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return appGroup?.feed.results.count ?? 0
     }
