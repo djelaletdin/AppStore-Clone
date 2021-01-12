@@ -10,10 +10,19 @@ import UIKit
 class ReviewCell: UICollectionViewCell {
     
     
-    let titleLabel = UILabel(text: "Review Title", font: .boldSystemFont(ofSize: 18))
+    let titleLabel = UILabel(text: "Review Title", font: .boldSystemFont(ofSize: 16))
     let authorLabel = UILabel(text: "Author", font: .systemFont(ofSize: 16))
     let starsLabel = UILabel(text: "Stars", font: .systemFont(ofSize: 14))
     let bodyLabel = UILabel(text: "Review body\nReview body\nReview body\n", font: .systemFont(ofSize: 16), numberOfLines: 0)
+    
+    var review: Entry?{
+        didSet{
+            titleLabel.text = review?.title.label
+            authorLabel.text = review?.author.name.label
+            bodyLabel.text = review?.content.label
+        }
+    }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,10 +35,14 @@ class ReviewCell: UICollectionViewCell {
         let stackView = VerticalStackView(arrangedSubviews: [
             UIStackView(arrangedSubviews: [
                 titleLabel, UIView(), authorLabel
-            ]),
+            ], customSpacing: 8),
             starsLabel,
             bodyLabel
         ], spacing: 12)
+        titleLabel.setContentCompressionResistancePriority(.init(0), for: .horizontal)
+        
+        
+//        titleLabel.setContentHuggingPriority(.init(.init(0)), for: .horizontal)
         
         addSubview(stackView)
         stackView.fillSuperview(padding: .init(top: 20, left: 20, bottom: 20, right: 20))
