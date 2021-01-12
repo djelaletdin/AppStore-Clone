@@ -57,7 +57,7 @@ class AppDetailCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
-    
+
 }
 
 extension UIStackView {
