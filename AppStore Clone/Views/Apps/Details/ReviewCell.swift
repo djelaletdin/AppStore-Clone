@@ -14,6 +14,18 @@ class ReviewCell: UICollectionViewCell {
     let authorLabel = UILabel(text: "Author", font: .systemFont(ofSize: 16))
     let starsLabel = UILabel(text: "Stars", font: .systemFont(ofSize: 14))
     let bodyLabel = UILabel(text: "Review body\nReview body\nReview body\n", font: .systemFont(ofSize: 16), numberOfLines: 0)
+    let starsStackView: UIStackView = {
+        var arrangedSubviews = [UIView]()
+        (0..<5).forEach { (_) in
+            let imageView = UIImageView(image: #imageLiteral(resourceName: "star"))
+            imageView.constrainHeight(constant: 24)
+            imageView.constrainWidth(constant: 24)
+            arrangedSubviews.append(imageView)
+        }
+        arrangedSubviews.append(UIView())
+        let stackView = UIStackView(arrangedSubviews: arrangedSubviews)
+        return stackView
+    }()
     
     var review: Entry?{
         didSet{

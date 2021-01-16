@@ -26,12 +26,14 @@ class AppDetailController: BaseListController, UICollectionViewDelegateFlowLayou
             }
             
             let reviewUrl = "http://itunes.apple.com/rss/customerreviews/page=1/id=\(appId ?? "")/sortby=mostrecent/json?1=en&cc=us"
+            print(reviewUrl)
             Service.shared.fetchGenericJSONData(urlString: reviewUrl) { (reviews: Reviews?, errors) in
                 if let err = errors{
                     print(err)
                     return
                 }
                 self.reviews = reviews
+                reviews?.feed.entry.forEach({print($0.rating.label) })
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
