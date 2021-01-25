@@ -28,7 +28,15 @@ class ReviewsController: HorizontalSnappingController, UICollectionViewDelegateF
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ReviewCell
+        let entry = self.reviewContent?.feed.entry[indexPath.row]
         cell.review = reviewContent?.feed.entry[indexPath.row]
+        
+        for (index, view) in cell.starsStackView.arrangedSubviews.enumerated() {
+            if let rating = Int(entry!.rating.label){
+                view.alpha = index >= rating ? 0 : 1
+            }
+        }
+        
         return cell
     }
     
