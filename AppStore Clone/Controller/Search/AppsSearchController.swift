@@ -21,6 +21,12 @@ class AppsSearchController: BaseListController, UICollectionViewDelegateFlowLayo
         return label
     }()
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let appId = appResults[indexPath.row].trackId
+        let appDetailController = AppDetailController(appId: String(appId))
+        navigationController?.pushViewController(appDetailController, animated: true)
+    }
+    
     var appResults = [Result]()
     var timer: Timer?
     
